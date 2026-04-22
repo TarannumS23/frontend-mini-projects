@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Translator</title>
+</head>
+<body>
+    <h1>English to Marathi Translator</h1>
+    <input type="text" id="Word" placeholder="Enter the word">
+    <button onclick="doWork()">Translate</button>
+
+    <h2 id="translation"></h2>
+    <script>
+        const engToMarathi = {
+            hi : "नमस्कार ",
+            "Good morning" : "शुभ सकाळ" ,
+            "Good afternoon" : "शुभ दुपार ",
+            "Thank you" : "आभार",
+            Sorry : "माफ करा" ,
+            Yes : "हो",
+            No : " नाही",
+            Good : "चांगले",
+            Bad : "वाईट",
+            Welcome : "स्वागत आहे ",
+            Please : "कृपया", 
+            Bye : "बाय ",
+            Change : "बदल"
+        };
+
+        function doWork() {
+            const wordElement = document.getElementById("Word");
+            const translationElement = document.getElementById("translation");
+
+            const word = wordElement.value;
+            const translation = engToMarathi[word];
+
+            if(translation){
+                translationElement.innerHTML = `${word} in Marathi is ${translation}`;
+            }
+            else{
+                translationElement.innerHTML = `Translation not found for ${word}`;
+            }
+        }
+    </script>
+</body>
+</html>
