@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #d7eafd;
+        }
+        .container{
+            border: 1px solid black;
+            width: 400px;
+            margin: 0 auto;
+            border-radius: 5px;
+            padding: 10px 20px;
+            box-shadow: 0 0 10px #3893ee;
+            margin-top: 50px;
+            background-color: white;
+        }
+        
+        .product{
+            height: 200px;
+            display: block;
+            margin: 20px auto;
+        }
+        .btn-add-cart{
+           font-size: 20px;
+           padding: 10px 20px ;
+           display: block;
+           margin: 20px auto;
+           background-color:#0477ea ;
+           border: none;
+           border-radius: 15px;
+           color: white;
+           cursor: pointer;
+        }
+        .btn-quantity{
+            height: 35px;
+        }
+        .quantity-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .quantity-text{
+            font-size: 40px;
+            margin: 0 50px;
+        }
+        @media screen and (max-width: 500px){
+            .container{
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="bag.png" class="product" id="product">
+        <h1 class="product-name">School Bag</h1>
+        <p>
+            Durable and spacious school bag with multiple compartments and a stylish design perfect 
+            for carrying books and essentials comfortably all day.
+        </p>
+
+        <h2>Price: ₹950/- </h2>
+
+        <div class="quantity-container">
+            <img src="minus.png" class="btn-quantity" id="minus" onclick="decrease()">
+
+            <span class="quantity-text" id="quantity-text">1</span>
+
+            <img src="plus.png" class="btn-quantity" id="plus" onclick="incease()">
+        </div>
+
+        <button class="btn-add-cart">
+            <b>Add to Cart</b>
+        </button>
+    </div>
+    <script>
+        const quantityText = document.getElementById('quantity-text');
+
+        function incease(){
+            let quantity = parseInt(quantityText.innerText);
+            if(quantity < 10){
+            quantityText.innerText = ++quantity;
+            }
+            else{
+                alert("You can't add more than 10 items at a time");
+            }
+        }
+
+        function decrease(){
+            let quantity = parseInt(quantityText.innerText);
+            if(quantity > 1){
+                quantityText.innerText = --quantity;
+            }
+            else{
+                alert("Quantity can't be less than 1");
+            }
+            
+        }
+        
+    </script>
+</body>
+</html>
