@@ -1,0 +1,568 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-navbar {
+    height: 100px;
+    width: 100%;
+    flex-direction: row;
+    top: 0;
+    display: flex;
+    border-radius: none;
+    align-items: center;
+    background-color: rgb(88, 88, 88);
+    position: fixed;
+    padding-top: -100px;
+    z-index: 1000;
+}
+
+.head {
+    margin: 50px 0 0 0;
+    height: 50px;
+}
+
+.img {
+    height: 70px;
+    width: 100px;
+    margin-inline-start: -1px;
+    margin-top: -30px;
+    border: 1px;
+    border-radius: 60%;
+    margin-bottom: 40px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: -30px 0 0 0;
+    padding-bottom: 30px;
+}
+
+#Nav {
+    font-size: 17px;
+    margin: 70px 0 0 10px;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff6600;
+}
+
+.title {
+    position: relative;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding: 100px 20px;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.title h1 {
+    font-size: 10vh;
+    text-shadow: 2px black;
+    transition: ease 0.3s;
+}
+
+.title h1:hover {
+    color: transparent;
+    -webkit-text-stroke: 1px rgb(255, 255, 255);
+}
+
+.paragraph-class {
+    font-size: 20px;
+}
+
+.event-button {
+    padding: 15px 15px;
+    margin-bottom: 100px;
+    text-align: center;
+    margin-left: 400px;
+    font-size: 20px;
+    background-color: #ffffff;
+    color: rgb(255, 126, 39);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    top: 60px;
+}
+
+.text h2 {
+    font-size: 40px;
+    font-weight: 650;
+    margin-bottom: 10px;
+    line-height: 2;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.text-box h2:hover {
+    color: #ffffff;
+}
+
+.container-row item {
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.event-button:hover {
+    background-color: #ff752b;
+    color: #ffffff
+}
+
+.event-button:active {
+    background-color: #e57813;
+}
+
+.container-information {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding: 20px;
+    align-items: center;
+    max-width: 1200px;
+    background-image: url('./../img/backgound\ image.jpeg');
+}
+
+.fort-image img {
+    width: 500px;
+    margin-top: 20px;
+    margin-left: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 450px;
+    border-radius: 1px;
+    border: 15px solid #fcf1e0;
+}
+
+.fort-info {
+    width: 50%;
+}
+
+.fort-info h2 {
+    font-size: 30px;
+    color: #000000;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.fort-info h2:hover {
+    background-color: #e66019;
+    color: #000000;
+}
+
+.fort-info p {
+    font-size: 18px;
+    color: #000000;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.rowitems {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    text-align: center;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    background-image: url('./../img/background img.jpeg');
+}
+
+.text-box {
+    line-height: 2;
+    text-align: center;
+    transition: color 0.3s ease;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 2;
+    text-align: center;
+    transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: rgb(255, 126, 39);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.text-box::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 150px;
+    height: 150px;
+    background-image: url('./../img/rajmudra.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.text-box::after {
+    content: '';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 150px;
+    height: 150px;
+    background-image: url('./../img/rajmudra.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.container-box {
+    border: 1px solid #d3d3d3;
+    border-radius: 5px;
+    padding: 10px 10px;
+    transition: all 0.7s ease 0s;
+    cursor: pointer;
+    margin-top: 20px;
+    background-color: rgb(255, 214, 160);
+}
+
+.container-image img {
+    height: 250px;
+    width: 90%;
+    padding-top: 10px;
+    margin-bottom: 15px;
+}
+
+.container-box h4 {
+    font-size: 15px;
+    margin-bottom: 5px;
+    font-weight: 100px;
+}
+
+.container-box h4:hover {
+    color: #ff6600;
+}
+
+.container-box p {
+    font-size: 16px;
+    color: #717070;
+}
+
+.container-box:hover {
+    transform: translateY(-5px);
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 8px 10px rgb(255, 102, 0);
+    border: all 0.2s ease;
+    border-radius: 5px;
+}
+
+.read-more-button {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    padding: 10px 10px;
+    font-size: 10px;
+    font-weight: bold;
+    color: rgb(255, 123, 0);
+    background-color: #f8f8f8;
+    border: 2px solid #f08247;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #f4821e;
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+.h1-fort {
+    font-size: 32px;
+    color: #333;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    line-height: 2;
+    text-align: center;
+    transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color:rgb(255, 126, 39);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.h1-fort::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 150px;
+    height: 150px;
+    background-image: url('./../img/rajmudra.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.h1-fort::after {
+    content: '';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 150px;
+    height: 150px;
+    background-image: url('./../img/rajmudra.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 30px;
+    gap: 20px;
+    box-shadow: solid #000000;
+    width: 100%;
+    cursor: pointer;
+}
+
+.fort {
+    text-align: center;
+    margin: 15px;
+    flex: 1 1 calc(50% - 20px);
+    max-width: 200px;
+    cursor: pointer;
+}
+
+.fort img {
+    width: 100%;
+    height: 200px;
+    transition: transform 0.3s ease;
+    border: 10px solid #f4e2c7;
+    cursor: pointer;
+}
+
+.fort img:hover {
+    transform: scale(1.0);
+    box-shadow: 0 2px 5px 3px rgba(255, 102, 0, 0.867); 
+}
+
+.fort-name {
+    margin-top: 8px;
+    font-weight: 900;
+    font-size: 25px;
+    color: #ff5100;
+}
+
+.table-body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 240vh;
+    background-size: cover;
+    background-position: center;
+}
+
+table {
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+th,
+td {
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 16px;
+}
+
+th {
+    background-color: #ffffff;
+    color: rgb(255, 123, 0);
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    transform: scale(0.1.);
+    background-color: #fc9753;
+}
+
+
+td {
+    color: black;
+}
+
+caption {
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    line-height: 2;
+    text-align: center;
+    transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: rgb(255, 126, 39);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+caption::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 150px;
+    height: 150px;
+    background-image: url('./../img/rajmudra.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+caption::after {
+    content: '';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 150px;
+    height: 150px;
+    background-image: url('./../img/rajmudra.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.footer-container {
+    background-color: #232946;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer-part1 {
+    width: 470px;
+    position: relative;
+}
+
+.footer-img-heading {
+    display: flex;
+}
+
+.rajmudra-img {
+    height: 70px;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.heading-footer {
+    padding-left: 10px;
+    position: absolute;
+    left: 90px;
+    top: 7px;
+    font-size: 20px;
+}
+
+.info-in-footer {
+    font-size: 16px;
+    padding-left: 50px;
+}
+
+.icon {
+    height: 30px;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 100%;
+}
+
+.icon-container {
+    margin: 30px 0px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer-part2 {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+
+}
+
+.heading-footer2 {
+    font-size: 22px;
+}
+
+.quick-links {
+    text-decoration: none;
+    color: #fff;
+    margin-left: 30px;
+}
+
+.location-container {
+    display: flex;
+}
+
+.Contact-Us {
+    width: 320px;
+}
+
+.location {
+    margin: 2px;
+    font-size: 17px;
+}
+
+.icon-contact-us {
+    margin: 5px;
+    height: 23px;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 100%;
+}
+
+.location-container {
+    margin: 17px;
+}

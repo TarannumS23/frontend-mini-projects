@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Events shivneri</title>
+    <link rel="icon" href="./../img/logofort.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container-navbar {
+            height: 100px;
+            width: 100%;
+            flex-direction: row;
+            top: 0;
+            display: flex;
+            border-radius: none;
+            align-items: center;
+            background-color: rgb(88, 88, 88);
+            position:fixed;
+            padding-top: -100px;
+            z-index: 1000;
+        }
+
+        .head {
+            margin: 50px 0 0 0;
+            height: 50px;
+        }
+
+        .img-logo {
+            height: 70px;
+            width: 100px;
+            margin-inline-start: -1px;
+            margin-top: -30px;
+            border: 1px;
+            border-radius: 60%;
+            margin-bottom: 40px;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin: -30px 0 0 0;
+            padding-bottom: 30px;
+            position: sticky;
+
+        }
+
+        #Nav {
+            font-size: 17px;
+            margin: 70px 0 0 10px;
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #ff6600;
+        }
+
+        .header-img {
+            text-align: center;
+        }
+        header {
+            background-image: url('./../img/event\ bg\ img.png');
+            background-size: cover;
+            background-position: center;
+            padding: 130px 60px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            height: 400px;
+        }
+
+        .h1 {
+            font-size: 3rem;
+            text-align: center;
+            color: #ff6a00;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            background-image: url('./../img/backgound image.jpeg');
+            font-weight: 900;
+        }
+
+        .text h2 {
+            font-size: 40px;
+            font-weight: 650;
+            margin-bottom: 10px;
+            line-height: 2;
+            text-align: center;
+            transition: color 0.3s ease;
+        }
+
+        .text-box h2:hover {
+            color: #ffffff;
+        }
+
+        .container-information {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            padding: 20px;
+            align-items: center;
+            background-image: url('./../img/backgound\ image.jpeg');
+        }
+        .fort-image img {
+            width: 600px;
+            margin-top: 20px;
+            margin-left: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            height: auto;
+            border: 15px solid #fcf1e0;
+        }
+
+        .fort-info {
+            width: 50%;
+        }
+
+        .fort-info p {
+            font-size: 20px;
+            color: #542e2e;
+            line-height: 1.6;
+            margin-bottom: 10px;
+            text-align: justify;
+            font-weight: 400;
+            font-family: cursive;
+        }
+
+        .images-of-shivneri {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 10px;
+            margin-top: 0px;
+            background-image: url('./../img/backgound image.jpeg');
+        }
+
+        .img {
+            height: 300px;
+            margin: 5px;
+            border: 15px solid #fcf1e0;
+            cursor: pointer;
+        }
+
+        .img:hover {
+            box-shadow: 0px 0px 5px 3px #bf7f409b;
+        }
+        figure {
+            text-align: center;
+            margin: 0;
+        }
+
+        figcaption {
+            font-size: 20px;
+            color: #5d3f31;
+            font-family: cursive;
+        }
+
+        .tourism-card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 80px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 0px 20px;
+            background-image: url('./../img/backgound\ image.jpeg');
+        }
+
+        .tourism-card {
+            height: 400px;
+            width: 800px;
+            background-color: rgb(255, 214, 160);
+            margin: 10px auto;
+            border-radius: 5px;
+            border: 1px solid rgb(253, 181, 88);
+            padding: 20px;
+            flex: 1 1 300px;
+            margin-bottom: 20px;
+        }
+        .tourism-card:hover {
+            background-color: #bf7f409b;
+        }
+
+        .img-tourism {
+            width: 100%;
+            height: 70%;
+            text-align: center;
+            padding-left: 0px;
+
+        }
+
+        .tourism-card-heading {
+            color: #4f3625;
+            font-size: 25px;
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        .tourism-card-info {
+            font-size: 16px;
+            text-align: center;
+        }
+
+        .competition-container {
+            display: flex;
+            width: 100%;
+            background-image: url('./../img/backgound\ image.jpeg');
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 0px;
+            overflow: hidden;
+        }
+
+        .competition-images {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 10px;
+            width: 50%;
+            border: 15px solid #fcf1e0;
+        }
+
+        .competition-images img {
+            width: 100%;
+            height: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .competition-info {
+            width: 50%;
+            padding-left: 30px;
+        }
+
+        .competition-info h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #ff7b00;
+            text-align: center;
+        }
+
+        h2:hover {
+            color: #ff7b00;
+            transform: scale(1.3);
+        }
+
+        .competition-info p {
+            font-size: 20px;
+            line-height: 1.6;
+            color: #452c2c;
+        }
+       
+.footer-container {
+    background-color: #232946;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer-part1 {
+    width: 470px;
+    position: relative;
+}
+
+.footer-img-heading {
+    display: flex;
+}
+
+.rajmudra-img {
+    height: 70px;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.heading-footer {
+    padding-left: 10px;
+    position: absolute;
+    left: 90px;
+    top: 7px;
+    font-size: 20px;
+}
+
+.info-in-footer {
+    font-size: 16px;
+    padding-left: 50px;
+}
+
+.icon {
+    height: 30px;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 100%;
+}
+
+.icon-container {
+    margin: 30px 0px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer-part2 {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+
+}
+
+.heading-footer2 {
+    font-size: 22px;
+}
+
+.quick-links {
+    text-decoration: none;
+    color: #fff;
+    margin-left: 30px;
+}
+
+.location-container {
+    display: flex;
+}
+
+.Contact-Us {
+    width: 320px;
+}
+
+.location {
+    margin: 2px;
+    font-size: 17px;
+}
+
+.icon-contact-us {
+    margin: 5px;
+    height: 23px;
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 100%;
+}
+
+.location-container {
+    margin: 17px;
+}
+    </style>
+</head>
+<body>
+    <div class="conatiner_home">
+        <div class="container-navbar">
+            <div class="head">
+                <img src="./../img/logo.jpeg" alt="Logo" class="img-logo">
+            </div>
+            <div class="navbar">
+                <p id="Nav"><a href="./index.html">&nbsp;&nbsp;&nbsp;&nbsp;HOME</b></a></p>
+                <p id="Nav"><a href="./../pages/about.html">&nbsp;&nbsp;&nbsp;&nbsp;ABOUT US</a></p>
+                <p id="Nav"><a href="./../pages/history.html">&nbsp;&nbsp;&nbsp;&nbsp;HISTROY</a></p>
+                <p id="Nav"><a href="./../pages/gallary.html">&nbsp;&nbsp;&nbsp;&nbsp;GALLERY</a></p>
+                <p id="Nav"><a href="./../pages/forts.html"><b
+                            style="color:hsl(24, 100%, 44%)">&nbsp;&nbsp;&nbsp;&nbsp;FORTS</b></a></p>
+                <p id="Nav"><a href="./../pages/contact.html">&nbsp;&nbsp;&nbsp;&nbsp;CONTACT US</a></p>
+                <p id="Nav"><a href="./../pages/login.html">&nbsp;&nbsp;&nbsp;&nbsp;LOGIN OFFICE </a></p>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <h1></h1>
+        <p></p>
+    </header>
+    <div class="text-box">
+    </div>
+    <div class="container-information">
+        <div class="fort-image">
+            <img src="./../img/Chatrapati-Shivaji-Maharaj-Jayanti_1080-x-1080-1.webp" alt="information fort">
+        </div>
+
+        <div class="fort-info">
+            <p><b class="h1" style="color:hsl(23, 100%, 50%)">Events Of Shivneri</b><br>Shivneri Fort,the birthplace of
+                Chhatrapati Shivaji Maharaj, hosts several significant events throughout
+                the year that celebrate its historical and cultural importance. One of the most notable events is
+                Shivaji Maharaj Jayanti on February 19, which marks the birth anniversary of the Maratha ruler. This
+                event includes tributes, speeches, processions, and cultural performances that honor Shivaji's legacy.
+                Another important occasion is Independence Day (August 15), when the fort becomes a site for patriotic
+                celebrations, flag hoisting, and local performances. Additionally, trekking events and heritage walks
+                are organized to explore the fort’s historical significance. Cultural performances such as Lavani and
+                Lezim dance, as well as Maratha war reenactments, often take place during major festivals, bringing the
+                fort’s rich history to life.
+            </p>
+        </div>
+    </div>
+    <h1 class="h1">Highlights of Hindavi Swarajya Mahotsav</h1>
+    <div class="images-of-shivneri">
+        <figure>
+            <img src="./../img/Sohala-Santaancha-v1-.webp" alt="Sohala Santaancha" class="img" />
+            <figcaption>Sohala Santaancha</figcaption>
+        </figure>
+        <figure>
+            <img src="./../img/Shahir-Suresh-Jadhav-Powada.webp" alt="Shahir Suresh Jadhav Powada" class="img" />
+            <figcaption>Powada</figcaption>
+        </figure>
+        <figure>
+            <img src="./../img/Janta-Raja-Grand-Natak.webp" alt="Janta Raja Grand Natak" class="img" />
+            <figcaption>Janta Raja Grand Natak</figcaption>
+        </figure>
+        <figure>
+            <img src="./../img/Garja-Maharashtra-Maza.webp" alt="Garja Maharashtra Maza" class="img" />
+            <figcaption>Garja Maharashtra Maza</figcaption>
+        </figure>
+        <figure>
+            <img src="./../img/Shiv-Vandana.webp" alt="Shiv Vandana" class="img" />
+            <figcaption>Shiv Vandana</figcaption>
+        </figure>
+        <figure>
+            <img src="./../img/Mahashiv-Aarti.webp" alt="Mahashiv Aarti" class="img" />
+            <figcaption>Mahashiv Aarti</figcaption>
+        </figure>
+        <figure>
+            <img src="./../img/Ganimi-Kawa.webp" alt="Ganimi Kawa" class="img" />
+            <figcaption>Ganimi Kawa</figcaption>
+        </figure>
+        <figure>
+            <img src="./../img/Shiv-Jayanti.webp" alt="Shiv Jayanti" class="img" />
+            <figcaption>Shiv Jayanti</figcaption>
+        </figure>
+    </div>
+    <h1 class="h1">Collaborative Activities</h1>
+
+    <div class="tourism-card-container">
+        <div class="tourism-card">
+            <img src="./../img/Trekkers-at-Shinaeri-Fort.jpg" alt="Shivneri Fort Trekking" class="img-tourism">
+            <h3 class="tourism-card-heading">Shivneri Fort Trekking</h3>
+            <p class="tourism-card-info">Embark on a thrilling trek to Shivneri Fort, exploring its gates, temples, and
+                panoramic views of the surrounding landscapes.</p>
+        </div>
+
+        <div class="tourism-card">
+            <img src="./../img/Shivneri-Marathon.webp" alt="Shivneri Marathon" class="img-tourism">
+            <h3 class="tourism-card-heading">Shivneri Marathon</h3>
+            <p class="tourism-card-info">Take part in the Shivneri Marathon, running around the fort and nearby areas,
+                symbolizing the courage and legacy of Shivaji Maharaj.</p>
+        </div>
+
+        <div class="tourism-card">
+            <img src="./../img/Adventure-Activities.webp" alt="Adventure Activities" class="img-tourism">
+            <h3 class="tourism-card-heading">Adventure Activities</h3>
+            <p class="tourism-card-info">Shivneri Fort is a popular trekking spot for adventure enthusiasts. Trekking
+                events are often held where participants explore the fort and surrounding areas.</p>
+        </div>
+
+        <div class="tourism-card">
+            <img src="./../img/Photowalk-Shivneri.webp" alt="Historical Walks" class="img-tourism">
+            <h3 class="tourism-card-heading">Historical Walks</h3>
+            <p class="tourism-card-info">Join a guided walk to learn about the rich history of Shivneri Fort, the
+                birthplace of Shivaji Maharaj, and discover its significance in Maratha history.</p>
+        </div>
+
+        <div class="tourism-card">
+            <img src="./../img/temple-tour.webp" alt="War Reenactments" class="img-tourism">
+            <h3 class="tourism-card-heading">Temple tour</h3>
+            <p class="tourism-card-info">A temple tour typically refers to visiting multiple temples in a specific
+                region, often as part of a spiritual or cultural journey. </p>
+        </div>
+
+        <div class="tourism-card">
+            <img src="./../img/Shiv-Jayanti.webp" alt="Shiv Jayanti Celebrations" class="img-tourism">
+            <h3 class="tourism-card-heading">Shiv Jayanti Celebrations</h3>
+            <p class="tourism-card-info">Celebrate the birth anniversary of Shivaji Maharaj with special ceremonies,
+                cultural performances, and patriotic activities at Shivneri Fort.</p>
+        </div>
+    </div>
+    <h1 class="h1">Shivneri Art Contest</h1>
+    <div class="competition-container">
+        <div class="competition-images">
+            <img src="./../img/1_Contest-Alert-.webp" alt="Painting Competition">
+            <img src="./../img/2_Painting-contest-.webp" alt="Photography Competition">
+            <img src="./../img/2_Painting-contest-.webp" alt="Powada Competition">
+            <img src="./../img/4_Powada-contest-.webp" alt="Brushwork Close-up">
+        </div>
+
+        <div class="competition-info">
+            <h2>Painting Competition</h2>
+            <p>This competition invites all artists to showcase their creativity through paintings. Participants can
+                express their vision, creativity, and mastery of various painting techniques, whether it be traditional,
+                contemporary, or abstract art. The competition encourages diversity in styles, colors, and mediums.
+            </p>
+
+            <h2>Photography Competition</h2>
+            <p>A competition for photographers to showcase their talent and passion for capturing stunning moments.
+                Whether it's landscape, portrait, wildlife, or street photography, the goal is to capture compelling,
+                thought-provoking images that tell a story or evoke emotion.</p>
+
+            <h2>Powada Competition</h2>
+            <p>Powada is a traditional Marathi form of poetry and performance, which includes both narration and music.
+                The Powada Competition invites performers to showcase their skills in this vibrant art form, paying
+                tribute to the historical and cultural significance of Maratha warriors and legends.</p>
+        </div>
+    </div>
+    <div class="footer-container">
+        <div class="footer-part1">
+            <div class="footer-img-heading">
+                <img src="./../img/rajmudra.png" alt="rajmudra" class="rajmudra-img">
+                <h3 class="heading-footer">CHHATRAPATI SHIVAJI MAHARAJ</h3>
+            </div>
+            <p class="info-in-footer">Shivaji Maharaj, a visionary leader, founded the Maratha Empire through
+                military innovations, wisdom quotes, and respect for women's rights, fostering harmony and inspiring
+                generations with his legacy of resistance and governance.</p>
+            <div class="icon-container">
+                <a href="https://www.facebook.com/WeAreTeamIndia/" rel="noopener" target="_blank">
+                    <img src="./../img/icons/facebook_icon.png" alt="facebook_icon" class="icon" />
+                </a>
+
+                <a href="https://www.instagram.com/WeAreTeamIndia/" rel="noopener" target="_blank">
+                    <img src="./../img/icons/instagram_icon.png" alt="instagram-icon" class="icon" />
+                </a>
+
+                <a href="https://www.twitter.com/WeAreTeamIndia/" rel="noopener" target="_blank">
+                    <img src="./../img/icons/twitter_icon.png" alt="twitter_icon" class="icon" />
+                </a>
+
+                <a href="https://www.linkdin.com/WeAreTeamIndia/" rel="noopener" target="_blank">
+                    <img src="./../img/icons/linkedin_icon.png" alt="linkedin_icon" class="icon" />
+                </a>
+
+                <a href="https://www.whatsapp.com/WeAreTeamIndia/" rel="noopener" target="_blank">
+                    <img src="./../img/icons/whatsapp_icon.png" alt="whatsapp_icon" class="icon" />
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-part2">
+
+            <h3 class="heading-footer2">Quick links</h3>
+
+            <a href="./../index.html" rel="noopener" target="_blank" class="quick-links">
+                Home
+            </a>
+
+            <a href="./history.html" rel="noopener" target="_blank" class="quick-links">
+                History
+            </a>
+
+            <a href="./gallary.html" rel="noopener" target="_blank" class="quick-links">
+                Gallery
+            </a>
+
+            <a href="#" rel="noopener" target="_blank" class="quick-links">
+                Contact Us
+            </a>
+
+            <a href="./login.html" rel="noopener" target="_blank" class="quick-links">
+                Login Office
+            </a>
+
+            <a href="./about.html" rel="noopener" target="_blank" class="quick-links">
+                About Us
+            </a>
+
+        </div>
+
+        <div class="footer-part3">
+            <div class="Contact-Us">
+                <h3 class="heading-footer2">Contact Us</h3>
+                <div class="location-container">
+                    <img src="./../img/icons/location.png" alt="location" class="icon-contact-us">
+                    <p class="location">Fort Tourism, Mahalunge, Pune, Maharashtra 411045</p>
+                </div>
+    
+                <div class="location-container">
+                    <img src="./../img/icons/phone_icon.png" alt="location" class="icon-contact-us">
+                    <p class="location">+91-1239870990</p>
+                </div>
+                
+                <div class="location-container">
+                    <img src="./../img/icons/gmail_icon.png" alt="location" class="icon-contact-us">
+                    <p class="location">chhatraptishivajimaharaj@gmail.com</p>
+                </div>
+    
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
